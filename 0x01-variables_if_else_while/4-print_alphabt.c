@@ -7,11 +7,11 @@
 int main(void)
 {
 int ch;
-for (ch = 'a'; ch <= 'z' a++)
+for (ch = 'a'; ch <= 'z'; a++)
 {
 if (ch != 'q' && ch != 'e')
 {
-putchar;
+putchar(ch);
 }
 else
 {
