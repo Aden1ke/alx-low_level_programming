@@ -1,14 +1,18 @@
+#include <stdio.h>
+#include <unistd.h>
 /**
- * main - Write a that prints all single digit numbers of base 10 from 0.
- * Return:0 (Success)
+ * main - Entry point
+ * Description: prints char below 10
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-int num;
-for (num = 0; num < 10; num++)
+int a;
+for (a = 0; a < 10; a++)
 {
-putchar(num + '0');
+putchar(a + '0');
 }
 putchar('\n');
 return (0);
+}
 }
