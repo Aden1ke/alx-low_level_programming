@@ -20,7 +20,7 @@ letter = 'h';
 putchar(letter);
 letter = 'a';
 putchar(letter);
-letter = 'r'
+letter = 'r';
 putchar(letter);
 putchar("\n");
 return (0);
