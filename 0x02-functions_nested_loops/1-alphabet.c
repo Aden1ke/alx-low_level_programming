@@ -8,7 +8,7 @@ void print_alphabet(void)
 char pat;
 for (pat = a; pat <= z; pat++)
 {
-putchar(pat);
+_putchar(pat);
 }
 putchar("\n");
 return (0);
