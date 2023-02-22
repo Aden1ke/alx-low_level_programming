@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * main - Write a function that prints the alphabet, in lowercase.
  * Return:0 (success)
@@ -6,7 +6,7 @@
 void print_alphabet(void)
 {
 char c;
-for (c = a; c <= z; c++)
+for (c = 'a'; c <= 'z'; c++)
 {
 _putchar(c);
 }
