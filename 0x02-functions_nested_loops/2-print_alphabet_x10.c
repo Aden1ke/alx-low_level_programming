@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * main - Write a function that prints 10 times the alphabet.
+ * print_alphabet_x10 - Write a function that prints 10 times the alphabet.
+ * void print_alphabet_x10(void)
  * Return: void
  */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 char c;
 int a;
