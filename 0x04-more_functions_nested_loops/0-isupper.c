@@ -2,7 +2,6 @@
 /**
   * _isupper - Write a function that checks for uppercase character.
   * @c: The number to be computed.
-  *
   * Return: 1 if c is uppercase 0 for anything else.
   */
 int _isupper(int c)
