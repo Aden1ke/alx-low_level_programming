@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- * more_numbers- Write a function that prints 10 times the 0 t0 14 digits.
- * Return: the numbers .
+ * more_numbers - Prints the numbers 0-14 ten times.
  */
 void more_numbers(void)
 {
-int x, c;
-for (x = 0; x <= 10; x++)
+int num, count;
+for (count = 0; count <= 9; count++)
 {
-for (c = 0; c <= 14; c++)
+for (num = 0; num <= 14; num++)
 {
-_putchar(c + '0');
-}
-_putchar(x);
+if (num > 9)
+_putchar((num / 10) + '0');
+_putchar((num % 10) + '0');
 }
 _putchar('\n');
+}
 }
