@@ -12,7 +12,7 @@ for (c = 0; c <= 14; c++)
 {
 _putchar(c + '0');
 }
-_putchar(x + '0');
+_putchar(x);
 }
 _putchar('\n');
 }
