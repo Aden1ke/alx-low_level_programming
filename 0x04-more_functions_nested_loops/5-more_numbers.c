@@ -1,25 +1,16 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * more_numbers - entry point
- *
- * Description: Prints the numbers with _putchar
- *
+ * more_numbers - Write a function that prints 10 times the 0 t0 14 digits.
  * Return: void
  */
-
 void more_numbers(void)
+char c;
+int a;
+for (a = 1; a <= 10; a++)
 {
-int number, tens, units, row;
-for (row = 1; row <= 10; row++)
+for (c = '0'; c <= '14'; c++)
 {
-for (number = 0; number <= 14; number++)
-{
-tens = number / 10;
-units = number % 10;
-if (number > 9)
-_putchar(tens + '0');
-_putchar(units + '0');
+_putchar(c);
 }
 _putchar('\n');
 }
