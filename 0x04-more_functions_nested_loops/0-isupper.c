@@ -6,7 +6,7 @@
   * Return: 1 if c is uppercase 0 for anything else.
   */
 int _isupper(int c){
-for (c = 65; c <= 95; c++)
+for (c >= 65 && c <= 95)
 {
 return (1);
 }
