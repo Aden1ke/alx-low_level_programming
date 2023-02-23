@@ -5,8 +5,9 @@
   *
   * Return: 1 if c is uppercase 0 for anything else.
   */
-int _isupper(int c){
-for (c >= 65 && c <= 95)
+int _isupper(int c)
+{
+for (c >= 65 && c <= 97)
 {
 return (1);
 }
