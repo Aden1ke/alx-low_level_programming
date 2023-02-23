@@ -1,20 +1,25 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * more_numbers- Checks for digits character.
- * Return: the numbers 0 to 9
+ * more_numbers - entry point
+ *
+ * Description: Prints the numbers with _putchar
+ *
+ * Return: void
  */
+
 void more_numbers(void)
 {
-int q, x;
-for (q = 0; q <= 10; q++)
+int number, tens, units, row;
+for (row = 1; row <= 10; row++)
 {
-for (x = 0; x <= 14; x++)
+for (number = 0; number <= 14; number++)
 {
-if (y > 9)
-{
-_putchar((x / 10) + '0');
-}
-_putchar((x % 10) + '0');
+tens = number / 10;
+units = number % 10;
+if (number > 9)
+_putchar(tens + '0');
+_putchar(units + '0');
 }
 _putchar('\n');
 }
