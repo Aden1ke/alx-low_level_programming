@@ -4,11 +4,10 @@
  * Return: void
  */
 void more_numbers(void)
-char c;
-int a;
+int c, a;
 for (a = 1; a <= 10; a++)
 {
-for (c = '0'; c <= '14'; c++)
+for (c = 0; c <= '14'; c++)
 {
 _putchar(c);
 }
