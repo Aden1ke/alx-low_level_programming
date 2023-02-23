@@ -7,7 +7,7 @@
   */
 int _isupper(int c)
 {
-for (c = 65; c <= 97; c++)
+if (c >= 65 && c <= 97)
 {
 return (1);
 }
