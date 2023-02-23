@@ -10,10 +10,12 @@ for (q = 0; q < 10; q++)
 {
 for (x = 0; x <= 14; x++)
 {
-if (x > 9)
+if (y > 9)
+{
 _putchar((x / 10) + '0');
 }
 _putchar((x % 10) + '0');
 }
 _putchar('\n');
+}
 }
