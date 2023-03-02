@@ -10,7 +10,8 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int i, j, n, len1, len2; /* i = iterator, n = carry over number */
+int i, j, n, len1, len2;
+/* i = iterator, n = carry over number */
 for (len1 = 0; n1[len1] != '\0'; len1++)
 ;
 for (len2 = 0; n2[len2] != '\0'; len2++)
@@ -21,7 +22,7 @@ i = j = len2 - 1;
 else
 i = j = len1 - 1;
 else
-i = j = size_r;	
+i = j = size_r;
 n = 0;
 /* if first number >= 10, set the value to 1 and increase the buffer by 1.*/
 if ((n1[0] - '0') + (n2[0] - '0') >= 10)
