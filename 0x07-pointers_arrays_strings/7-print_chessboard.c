@@ -4,7 +4,6 @@
  * @a: the pointer array
  * Returns: the void
  */
-
 void print_chessboard(char (*a)[8])
 {
 int row;
