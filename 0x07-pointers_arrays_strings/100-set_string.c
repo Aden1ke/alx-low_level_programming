@@ -1,4 +1,4 @@
-#include "maiin.h"
+#include "main.h"
 /**
  * set_string - function definition
  * @s: the pointer to use
