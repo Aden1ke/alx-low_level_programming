@@ -30,7 +30,7 @@ for (i = 0; i < 5; i++)
 {
 coin_count = cents / coins[i];
 num_coins += coin_count;
-cents -= coin_count * coins[i];
+cents -= coin_count *coins[i];
 }
 printf("%d\n", num_coins);
 return (0);
