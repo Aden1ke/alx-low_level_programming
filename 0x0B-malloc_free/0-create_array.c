@@ -9,7 +9,8 @@
  * @c: char to initialize array with
  * Return: char value
  */
-char *create_array(unsigned int size, char c){
+char *create_array(unsigned int size, char c)
+{
 char *ptr;
 unsigned int i;
 if (size <= 0)
