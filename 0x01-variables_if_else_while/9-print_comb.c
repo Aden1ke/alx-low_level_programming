@@ -12,8 +12,11 @@ int main(void)
 	for (nom = 0; nom <= 9; nom++)
 	{
 		putchar(nom + '0');
-		putchar(',');
-		putchar(' ');
+		if (nom < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);

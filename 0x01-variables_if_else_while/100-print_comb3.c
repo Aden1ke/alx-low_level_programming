@@ -13,10 +13,16 @@ int main(void)
 	{
 		for (nom2 = 0; nom2 <= 9; nom2++)
 		{
+		if (nom1 < nom2)
+		{
 			putchar(nom1 + '0');
 			putchar(nom2 + '0');
+		if  (nom1 != 8 || (nom2 == 8 && nom2 != 8))
+		{
 			putchar(',');
 			putchar(' ');
+		}
+		}
 		}
 	}
 	putchar('\n');
