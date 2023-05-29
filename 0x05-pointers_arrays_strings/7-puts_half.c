@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * rev_string - a function that prints half of a string.
+ * puts_half - a function that prints half of a string.
  *@str: pointer to a string.
  */
 void puts_half(char *str)
