@@ -17,11 +17,18 @@ char *cap_string(char *str)
 		{
 			str[i] -= 32;
 		}
-		for (j = 0; diff[j] != '\0'; j++)
+		else
 		{
-			if (str[i] == diff[j] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			for (j = 0; diff[j] != '\0'; j++)
 			{
-				str[i + 1] -= 32;
+				if (str[i] == diff[j])
+				{
+					if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+					{
+						str[i + 1] -= 32;
+					}
+					break;
+				}
 			}
 		}
 	}
