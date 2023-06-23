@@ -10,37 +10,38 @@
 void print_all(const char * const format, ...)
 {
 	int len = strlen(format);
-	unsigned int i, n;
+	int i;
 	va_list args;
+	char *str;
 
 	if (format != NULL)
 	{
 	va_start(args, format);
 
-	for (i = 0; i < len i++)
+	for (i = 0; i < len; i++)
 	{
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(args, int)), n++;
+			printf("%c", va_arg(args, int));
 			break;
 		case 'i':
-			printf("%d", va_arg(args, int)), n++;
+			printf("%d", va_arg(args, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(args, double)), n++;
+			printf("%f", va_arg(args, double));
 			break;
 		case 's':
-			str = va_arg(args, char *), n++;
-			if (!str)
+			str = va_arg(args, char*);
+			if (str == NULL)
 			{
-				printf("(nil)");
-				break;
+				printf("nil");
 			}
 			printf("%s", str);
 			break;
+		default:
+		continue;
 		}
-		i++;
 		if (i < len - 1)
 		{
 			printf(", ");
