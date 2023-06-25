@@ -1,4 +1,6 @@
 #include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include "printf.h"
 #include <stdarg.h>
 #include <stdio.h>
@@ -72,8 +74,14 @@ int _printf(const char *format, ...)
 			count++;
 			break;
 		case 'r':
-			str = rev_string(va_arg(my_args, char*));
-			count += strlen(str);
+			str = strdup(va_arg(my_args, char*));
+			if (str != NULL)
+			{
+				rev_string(str);
+				printf("%s", str);
+				count += strlen(str);
+			}
+			free(str);
 			break;
 		default:
 		continue;
@@ -111,24 +119,36 @@ void print_binary(int num)
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		printf("%d", remainder[j]);
+		char digit = remainder[j] + '0';
+		_write(1, &digit, 1);
 	}
 }
 char* rev_string(char *s)
 {
 	int i;
 	int tmp;
-	int len = strlen(s);
-
-	for (i = 0; i <= len / 2; i++)
-	{
-		tmp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = tmp;
-	}
+	int len;
+       if (s == NULL)
+       {
+	       return (NULL);
+       }
+       len = strlen(s);
+       for (i = 0; i <= len / 2; i++)
+       {
+	       tmp = s[i];
+	       s[i] = s[len - i - 1];
+	       s[len - i - 1] = tmp;
+       }
 	return (s);
 }
+int _write(int fd, const void *buf, size_t count)
+{
+	static char buffer[1024];
 
+	memcpy(buffer, buf, count);
+	write(fd, buffer, count);
+	return (count);
+}
 
 
 int main(void)
