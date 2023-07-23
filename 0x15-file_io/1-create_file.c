@@ -8,7 +8,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t bytes_written;
+	ssize_t bytes_written = 0;
 	size_t text_len = 0;
 
 	if (filename == NULL)
@@ -23,9 +23,15 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (0);
-	bytes_written = write(STDOUT_FILENO, text_content, text_len);
+	if (text_len > 0)
+	{
+		bytes_written = write(fd, text_content, text_len);
+		if (bytes_written == -1)
+		{
+			close(fd);
+			return (-1);
+		}
+	}
 	close(fd);
-	if (bytes_written != (ssize_t)text_len)
-		return (0);
 	return (1);
 }
